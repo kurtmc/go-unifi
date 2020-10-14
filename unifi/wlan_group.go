@@ -8,7 +8,6 @@ import (
 func (n *WLANGroup) UnmarshalJSON(b []byte) error {
 	type Alias WLANGroup
 	aux := &struct {
-		Maxsta emptyStringInt `json:"maxsta"`
 		*Alias
 	}{
 		Alias: (*Alias)(n),
@@ -18,8 +17,6 @@ func (n *WLANGroup) UnmarshalJSON(b []byte) error {
 	if err != nil {
 		return err
 	}
-
-	n.Maxsta = int(aux.Maxsta)
 
 	return nil
 }

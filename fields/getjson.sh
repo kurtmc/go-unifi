@@ -1,8 +1,8 @@
-#! /bin/bash
+#!/bin/bash
 
 deburl="https://dl.ui.com/unifi/$1/unifi_sysvinit_all.deb"
 wkdir="$(mktemp -d)"
-deb="$wkdir\unifi.deb"
+deb="${wkdir}/unifi.deb"
 
 curl -o "$deb" "$deburl"
 
