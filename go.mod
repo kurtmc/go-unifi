@@ -1,4 +1,4 @@
-module github.com/paultyng/go-unifi
+module github.com/kurtmc/go-unifi
 
 go 1.12
 
